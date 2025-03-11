@@ -26,30 +26,35 @@ data = [
 ]
 
 
-def ask_questions():
+def star_wars_quiz():
     correct = 0
     incorrect = 0
     wrong_answers = []
 
     for item in data:
-        answer = input(item["question"] + " ")
-
-        if answer.strip().lower() == item["answer"].lower():
+        answer = input(f"{item['question']} ")
+        if answer.lower() == item["answer"].lower():
             correct += 1
         else:
             incorrect += 1
-            wrong_answers.append(item["question"])
+            wrong_answers.append({
+                "question": item['question'],
+                "user_answer": answer,
+                "correct_answer": item['answer']
+            })
 
-    show_results(correct, incorrect, wrong_answers)
+    print(" ----- Results: ----- ")
+    print(f"You got {correct} correct answers and {incorrect} incorrect answers.")
 
+    print(" ----- Correction: ----- ")
+    if wrong_answers:
+        print("Here are the questions you answered wrong:\n")
+        for wrong in wrong_answers:
+            print(f"The Question: {wrong['question']}")
+            print(f"Your answer: {wrong['user_answer']}")
+            print(f"The Correct answer: {wrong['correct_answer']}\n")
 
-def show_results(correct, incorrect, wrong_answers):
-    print(
-        f"\nYou got {correct} correct answers and {incorrect} incorrect answers.")
+    if incorrect > 3:
+        print("You had more than 3 wrong answers. Play again!")
 
-    if incorrect > 0:
-        print("\nThe questions you answered wrong:")
-        for question in wrong_answers:
-            print(question)
-
-ask_questions()
+star_wars_quiz()
