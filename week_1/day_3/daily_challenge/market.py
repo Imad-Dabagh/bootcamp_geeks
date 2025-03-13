@@ -28,8 +28,17 @@ class Farm:
         return sorted(self.animals.keys())
     
     def get_short_info(self):
+        animal_types = self.get_animal_types()
+        sentence = []
+        for animal in animal_types:
+            if self.animals[animal] > 1:
+                sentence.append(animal+"s")
+            else:
+                sentence.append(animal)
 
-        pass
+        return f"{self.name}'s farm has {', '.join(sentence[:-1])} and {sentence[-1]}"
+
+
 
 
 macdonald = Farm("McDonald")
@@ -38,7 +47,10 @@ macdonald.add_animal('cow', 5)
 macdonald.add_animal('sheep')
 macdonald.add_animal('sheep')
 macdonald.add_animal('goat', 12)
+macdonald.add_animal('Tiger')
 
 print(macdonald.get_info())
 
 print(macdonald.get_animal_types())
+
+print(macdonald.get_short_info())
