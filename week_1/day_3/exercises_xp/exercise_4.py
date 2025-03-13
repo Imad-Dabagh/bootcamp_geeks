@@ -4,7 +4,11 @@ class Zoo:
         self.animals = []
 
     def add_animal(self, new_animal):
-        self.animals.append(new_animal)
+        if new_animal in self.animals:
+            print(f"{new_animal} already in the Zoo")
+        else:
+            self.animals.append(new_animal)
+            print(f"{new_animal} added")
 
     def get_animals(self):
         print(self.animals)
@@ -12,6 +16,7 @@ class Zoo:
     def sell_animal(self, animal_sold):
         if animal_sold in self.animals:
             self.animals.remove(animal_sold)
+            print(f"{animal_sold} sold")
         else:
             print(f"We don't have {animal_sold} in the Zoo")
 
@@ -31,7 +36,7 @@ class Zoo:
     def get_groups(self):
         grouped_animals = self.sort_animals()
         for letter, animals in grouped_animals.items():
-            print(f"Group {letter}: {', '.join(animals)}")
+            print(f"{letter}: {', '.join(animals)}")
         
 # Creating the object
 zoo_1 = Zoo("CasaZoo")
@@ -60,18 +65,24 @@ zoo_1.get_groups()
 # Question 8: creating new object
 new_york_zoo = Zoo("New York Zoo")
 # --> Add animal method
-animal_to_add = input("Which animal should we add to the zoo --> ")
-new_york_zoo.add_animal(animal_to_add)
+# animal_to_add = input("Which animal should we add to the zoo --> ")
+animals_to_add = ["Cat","Dog","Lama","Monkey"]
+    
+for animal_to_add in animals_to_add:
+    new_york_zoo.add_animal(animal_to_add)
 
 # --> Get animals list
 new_york_zoo.get_animals()
 
 # --> Sell animale and update the list
-animal_to_sell = input("Which animal should we sell --> ")
+animal_to_sell = input("\nWhich animal should we sell --> ")
 new_york_zoo.sell_animal(animal_to_sell)
 
 # --> Sort animals in dictionary
+
+print("\nSorting animals in dictionary")
 print(new_york_zoo.sort_animals())
 
+print("\nSorting animals in groups")
 # --> Sort animals in groups
 new_york_zoo.get_groups()
