@@ -29,15 +29,9 @@ dog1 = Dog("Rex", 4, 30)
 dog2 = Dog("Jaki", 5, 40)
 dog3 = Dog("Malinwa", 2, 30)
 
-print(dog1.bark)
-print(dog1.run_speed)
+print(dog1.bark())
 
-print(dog2.bark)
-print(dog2.run_speed)
+print(dog3.run_speed())
+print(dog2.run_speed())
 
-print(dog3.bark)
-print(dog3.run_speed)
-
-print(dog1.fight(dog2))
-print(dog1.fight(dog3))
-print(dog2.fight(dog3))
+print(dog2.fight(dog1))
