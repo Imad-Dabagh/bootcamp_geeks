@@ -1,5 +1,4 @@
 from connection import DbConnection
-from menu_item import MenuItem
 
 
 class MenuManager:
@@ -33,3 +32,17 @@ class MenuManager:
         connection.close()
 
         return items
+
+
+
+# ======== Testings ========
+
+# item = MenuItem('Burger', 35)
+# item.save()
+# item.delete()
+# item.update('Veggie Burger', 37)
+
+# item2 = MenuItem('Pizza', 20)
+# item2.save()
+# item2 = MenuManager.get_by_name('Pizza')
+# items = MenuManager.all_items()
