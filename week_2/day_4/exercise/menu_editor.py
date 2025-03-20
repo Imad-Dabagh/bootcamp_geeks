@@ -34,7 +34,7 @@ def update_item_from_menu():
 
 
 def show_restaurant_menu():
-    items = MenuManager.all_items()
+    items = MenuManager().all_items()
 
     if items:
         print("\n====== Restaurant Menu ======")
