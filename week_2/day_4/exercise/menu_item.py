@@ -24,7 +24,6 @@ class MenuItem:
         cursor.close()
         connection.close()
 
-
     def update(self, new_name, new_price):
         connection = self.db.connect()
         cursor = connection.cursor()
