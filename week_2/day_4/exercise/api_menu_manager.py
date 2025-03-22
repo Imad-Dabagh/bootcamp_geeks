@@ -38,3 +38,17 @@ def get_item_by_name(item_name: str):
     if item:
         return {"item": item}
     raise HTTPException(status_code=404, detail="Item not found")
+
+# Get the price of a single item by name
+@app.get("/menu/price/{item_name}")
+def get_item_price(item_name: str):
+    price = MenuManager.get_item_price(item_name)
+    if price is not None:
+        return {"price": price}
+    raise HTTPException(status_code=404, detail="Item not found")
+
+# Calculate the average price of all items
+@app.get("/menu/average-price")
+def get_average_price():
+    avg_price = MenuManager.get_average_price()
+    return {"average_price": avg_price}
