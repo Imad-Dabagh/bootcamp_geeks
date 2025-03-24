@@ -1,7 +1,7 @@
-// 1. Create a variable called sentence
-// let sentence = "The dinner is not that bad, I like it";
+// Daily challenge: Not Bad
 
-let sentence = "This dinner is not bad ! like";
+// 1. Create a variable called sentence
+let sentence = "The dinner is not that bad, I like it";
 
 // 2. Create a variable called wordNot...
 let wordNot = sentence.indexOf("not");
