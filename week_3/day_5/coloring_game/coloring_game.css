@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+#colors {
+    background: rgb(180, 180, 180);
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    height: 100vh;
+    width: 20%;
+    float: left;
+    padding: 5px;
+}
+
+#colors>* {
+    border: 1px black solid;
+    border-radius: 5px;
+}
+
+button {
+    grid-column: 1 / 4;
+    background-color: white;
+    border: none;
+    color: black;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 25px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+#drawingArea {
+    display: grid;
+    grid-template-columns: repeat(50, 1fr);
+    height: 100vh;
+}
+
+#drawingArea>* {
+    border: 1px rgb(180, 180, 180) solid;
+    background-color: white;
+}
