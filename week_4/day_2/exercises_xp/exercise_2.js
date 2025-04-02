@@ -8,11 +8,11 @@ const ordinal = ["th", "st", "nd", "rd"];
 let choice = 1;
 colors.forEach((color) => {
     choice === 1
-      ? console.log(`${choice}st choice is ${color}`)
+      ? console.log(`${choice}${ordinal[1]} choice is ${color}`)
       : choice === 2
-      ? console.log(`${choice}nd choice is ${color}`)
+      ? console.log(`${choice}${ordinal[2]} choice is ${color}`)
       : choice === 3
-      ? console.log(`${choice}rd choice is ${color}`)
-      : console.log(`${choice}th choice is ${color}`);
+      ? console.log(`${choice}${ordinal[3]} choice is ${color}`)
+      : console.log(`${choice}${ordinal[0]} choice is ${color}`);
     choice++;
 });
