@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="get" id="form">
+        <input type="text" name="name" id="name">
+        <input type="text" name="lastname" id="lastname">
+        <button type="submit" id="submitBtn">send</button>
+    </form>
+
+</body>
+<script>
+    let form = document.querySelector("#form")
+    
+    const showData = (e) =>{
+        e.preventDefault();
+
+        let name = document.getElementById('name').value;
+        let lastname = document.getElementById('lastname').value;
+
+        let obj = {name: name, lastname: lastname}
+
+        let jsonObj = JSON.stringify(obj, null, 0)
+
+        let newDiv = document.createElement('div')
+        newDiv.textContent = jsonObj
+
+        document.body.appendChild(newDiv)
+
+    }
+
+form.addEventListener('submit', showData)
+    
+
+
+
+</script>
+</html>
