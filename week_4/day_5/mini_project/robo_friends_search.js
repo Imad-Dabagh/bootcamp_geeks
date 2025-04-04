@@ -1,5 +1,12 @@
 const robots = [
   {
+    id: 0,
+    name: "Zaki Laassri",
+    username: "Zaki.Laassri",
+    email: "Zaki.Laassri@karina.biz",
+    image: "https://robohash.org/yahya",
+  },
+  {
     id: 1,
     name: "Leanne Graham",
     username: "Bret",
@@ -68,6 +75,13 @@ const robots = [
     username: "Moriah.Stanton",
     email: "Rey.Padberg@karina.biz",
     image: "https://robohash.org/10?200x200",
+  },
+  {
+    id: 11,
+    name: "Amine Loloda",
+    username: "Amine_Loloda",
+    email: "Amine_Loloda@karina.biz",
+    image: "https://robohash.org/amine",
   },
 ];
 
