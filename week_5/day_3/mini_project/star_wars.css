@@ -1,0 +1,75 @@
+body {
+    background-color: black;
+    background-image: url(https://i.giphy.com/media/TxVVB6PfWMjE4/200.webp);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#title{
+    color: yellow;
+    font-size: 50px;
+}
+
+#container {
+    border: 3px solid yellow;
+    color: white;
+    border-radius: 15px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    max-width: 600px;
+}
+
+#loadingIcon p {
+    font-size: 20px;
+    color: yellow;
+}
+
+#loadingIcon i {
+    font-size: 30px;
+    color: yellow;
+}
+
+#characterInfo h1 {
+    margin: 5px;
+    font-size: 28px;
+    color: white;
+}
+
+#characterInfo p {
+    margin: 5px;
+    font-size: 22px;
+    color: white;
+}
+
+#find {
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+    background: yellow;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 10px 15px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#find:hover {
+    color: black;
+    background: white;
+    border: 2px solid yellow;
+}
+
+.hidden {
+    display: none;
+}
