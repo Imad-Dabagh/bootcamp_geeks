@@ -14,4 +14,11 @@ fs.readFile("source.txt", "utf-8", function (err, data) {
       console.log("Write operation complete.");
     }
   });
+  // ======= Using append method to write in destination.txt ========
+//   fs.appendFile("destination.txt", data + "\n", function (err) {
+//     if (err) {
+//       console.error(err);
+//       return;
+//     }
+//   });
 });
