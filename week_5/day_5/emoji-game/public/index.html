@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji Guessing Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="game-container">
+        <h1>Guess the Emoji! 🎮</h1>
+        <div class="emoji-display" id="emoji">?</div>
+        <div class="score">Score: <span id="score">0</span></div>
+
+        <form id="guess-form">
+            <div class="options" id="options">
+                <!-- Options will be inserted here by JavaScript -->
+            </div>
+            <button type="submit" id="submit-btn">Submit</button>
+        </form>
+
+        <div class="feedback" id="feedback"></div>
+        <button id="reset-btn">Reset Game</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Emoji Guess Game</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Emoji Guessing Game</h1>
+    <h2 id="emoji">🔄</h2>
+    <div id="options"></div>
+    <p id="message"></p>
+    <p><strong>Score:</strong> <span id="score">0</span></p>
+
+    <script>
+        let currentOptions = [];
+
+        function loadQuestion() {
+            fetch('/question')
+                .then(res => res.json())
+                .then(data => {
+                    document.getElementById('emoji').textContent = data.emoji;
+                    document.getElementById('score').textContent = data.score;
+                    document.getElementById('message').textContent = "";
+
+                    const optionsDiv = document.getElementById('options');
+                    optionsDiv.innerHTML = "";
+
+                    data.options.forEach(option => {
+                        const btn = document.createElement('button');
+                        btn.textContent = option;
+                        btn.onclick = () => makeGuess(option);
+                        optionsDiv.appendChild(btn);
+                    });
+                });
+        }
+
+        function makeGuess(guess) {
+            fetch('/guess', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ guess })
+            })
+                .then(res => res.json())
+                .then(data => {
+                    document.getElementById('emoji').textContent = data.emoji;
+                    document.getElementById('score').textContent = data.score;
+                    document.getElementById('message').textContent = data.message;
+
+                    const optionsDiv = document.getElementById('options');
+                    optionsDiv.innerHTML = "";
+
+                    data.options.forEach(option => {
+                        const btn = document.createElement('button');
+                        btn.textContent = option;
+                        btn.onclick = () => makeGuess(option);
+                        optionsDiv.appendChild(btn);
+                    });
+                });
+        }
+
+        loadQuestion();
+    </script>
+</body>
+
+</html>
