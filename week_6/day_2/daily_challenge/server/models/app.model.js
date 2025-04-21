@@ -81,3 +81,19 @@ module.exports = {
   getUserById,
   updateUser
 };
+
+// ======== SQL used 
+
+// CREATE TABLE users (
+//     id SERIAL PRIMARY KEY,
+//     email VARCHAR(255),
+//     username VARCHAR(50),
+//     first_name VARCHAR(100),
+//     last_name VARCHAR(100)
+// );
+
+// CREATE TABLE hashpwd (
+//     id SERIAL PRIMARY KEY,
+//     username VARCHAR(50),
+//     password VARCHAR(255)
+// );
