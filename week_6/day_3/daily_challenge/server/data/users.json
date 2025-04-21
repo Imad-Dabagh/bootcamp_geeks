@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "firstname": "Imad",
+    "lastname": "Dabagh",
+    "email": "imad@gmail.com",
+    "username": "imad_dabagh",
+    "password": "$2b$10$0fv35169Lxl9ls9C.EAGkuNghONcE6MQiLWb.2jxEiuqNv.KvSFju"
+  },
+  {
+    "id": 2,
+    "firstname": "Amine",
+    "lastname": "Labibi",
+    "email": "amine@gmail.com",
+    "username": "amine_dabagh",
+    "password": "$2b$10$qO/k5sqij2Xt4/kWs1ZebeobsQ98sI.KojtwDOU45DEeL38g0athi"
+  }
+]
