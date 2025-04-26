@@ -87,16 +87,15 @@ const FormComponent = ({ formData, handleChange }) => {
       <button type="submit">Submit</button>
 
       <h3>Entered Information:</h3>
-      <p><strong>First Name:</strong> {formData.firstName}</p>
-      <p><strong>Last Name:</strong> {formData.lastName}</p>
+      <p><strong>Your Name:</strong> {formData.firstName} {formData.lastName}</p>
       <p><strong>Age:</strong> {formData.age}</p>
       <p><strong>Gender:</strong> {formData.gender}</p>
       <p><strong>Destination:</strong> {formData.destination}</p>
       <p><strong>Dietary Restrictions:</strong></p>
       <ul>
-        {formData.diet.nutsFree && <li>Nuts free</li>}
-        {formData.diet.lactoseFree && <li>Lactose free</li>}
-        {formData.diet.vegan && <li>Vegan</li>}
+        <li>Nuts free: {formData.diet.nutsFree ? 'Yes' : 'No'}</li>
+        <li>Lactose free: {formData.diet.lactoseFree ? 'Yes' : 'No'}</li>
+        <li>Vegan: {formData.diet.vegan ? 'Yes' : 'No'}</li>
       </ul>
     </form>
   );
