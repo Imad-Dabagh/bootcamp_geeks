@@ -9,13 +9,13 @@ function App() {
   const [result, setResult] = useState(null);
 
   const handleInput1 = (e) => {
-    const value1 = e.target.value;
-    setNum1(Number(value1));
+    const value = e.target.value;
+    setNum1(Number(value));
   }
 
   const handleInput2 = (e) => {
-    const value2 = e.target.value;
-    setNum2(Number(value2));
+    const value = e.target.value;
+    setNum2(Number(value));
   }
 
   const calculate = () => {
