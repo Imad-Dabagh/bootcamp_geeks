@@ -5,8 +5,14 @@ new_string = ""
 
 for i in range(len(user_string)):
     if i > 0 and user_string[i] == user_string[i - 1]:
-        new_string += "" 
+        new_string += ""
     else:
         new_string += user_string[i]
 
 print(new_string)
+
+# "h-e-l-l-o"
+# "0-1-2-3-4"
+# length = 5
+
+print(len(user_string))
