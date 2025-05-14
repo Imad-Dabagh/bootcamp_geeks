@@ -28,15 +28,11 @@ function verifyNumber(number: number): void{
 }
 
 // Exercise 5: Create a function getDetails that takes a name and age as input and returns a tuple containing the input values and a greeting message.
-function getDetails(namee: string, age:number):any{
-    let details:(string | number)[] = []
+function getDetails(namee: string, age:number):[string, number, string]{
     let sentence:string = `Hello, ${namee}! You are ${age} years old.`
-    details.push(namee);
-    details.push(age);
-    details.push(sentence);
 
-    return details;
+    return [namee, age, sentence];
 }
-const details = getDetails("Alice", 25);
+const details = getDetails("Imad", 23);
 console.log(details);
 
